@@ -11,7 +11,7 @@ READ_API_KEY = "FC37OIGRCFBTMRBH"
 URL = f"https://api.thingspeak.com/channels/{CHANNEL_ID}/feeds.json"
 params = {
     "api_key": READ_API_KEY,
-    "results": 100
+    "results": 50000
 }
 
 # ========== FUNCIÓN PARA OBTENER DATOS ==========
@@ -78,3 +78,4 @@ while True:
             st.warning("No se pudieron cargar datos. Verifique la conexión.")
 
     time.sleep(15) # Refresco automático cada 15 segundos [cite: 206]
+    # streamlit run dashboard.py
